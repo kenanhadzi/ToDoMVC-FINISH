@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-25T14:08:27.490Z",
+    "end": "2023-04-25T14:08:34.048Z",
+    "duration": 6558,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7feaed29-5d42-488b-9cf5-18c29428a1e2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Completing-tasks.cy.js",
+      "file": "cypress\\e2e\\Completing-tasks.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9f78090b-227f-4742-b33f-c9935d4201f4",
+          "title": "ToDoMVC - Completing tasks",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Mark tasks as completed using the checkbox ",
+              "fullTitle": "ToDoMVC - Completing tasks Mark tasks as completed using the checkbox ",
+              "timedOut": null,
+              "duration": 1982,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input.toggle').click({\n  multiple: true\n});",
+              "err": {},
+              "uuid": "73e9aea3-efb2-4975-b554-80f771ed6f87",
+              "parentUUID": "9f78090b-227f-4742-b33f-c9935d4201f4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ensure completed tasks are displayed with a strike-through",
+              "fullTitle": "ToDoMVC - Completing tasks Ensure completed tasks are displayed with a strike-through",
+              "timedOut": null,
+              "duration": 1642,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input.toggle').click({\n  multiple: true\n});\ncy.get('.completed').find('label').invoke('css', 'text-decoration').should('include', 'line-through');",
+              "err": {},
+              "uuid": "345cdadb-6d3d-484b-8b2d-364f5794b5d5",
+              "parentUUID": "9f78090b-227f-4742-b33f-c9935d4201f4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "73e9aea3-efb2-4975-b554-80f771ed6f87",
+            "345cdadb-6d3d-484b-8b2d-364f5794b5d5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3624,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

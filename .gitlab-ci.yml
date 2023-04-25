@@ -1,0 +1,7 @@
+cypress-tests:
+  image: cypress/included
+  script:
+    - npm install
+    - $(npm bin)/cypress run
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'

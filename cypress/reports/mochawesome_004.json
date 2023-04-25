@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-25T14:09:14.469Z",
+    "end": "2023-04-25T14:09:22.019Z",
+    "duration": 7550,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "abfdb8d3-d5ff-495b-aa85-d9e8ac847d47",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Filtering-tasks.cy.js",
+      "file": "cypress\\e2e\\Filtering-tasks.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "20a17381-c05f-4bbf-8b0b-ef239c60661b",
+          "title": "ToDoMVC - Completing tasks",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ensure only the relevant tasks are displayed based on the chosen filter(ALL) ",
+              "fullTitle": "ToDoMVC - Completing tasks Ensure only the relevant tasks are displayed based on the chosen filter(ALL) ",
+              "timedOut": null,
+              "duration": 1817,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input.toggle').eq(0).click();\ncy.get('.selected').click();\ncy.get('.todo-list li').find('label').eq(0).should('contain', 'Task 1');\ncy.get('.todo-list li').find('label').eq(1).should('contain', 'Task 2');\ncy.get('.todo-list li').find('label').eq(2).should('contain', 'Task 3');",
+              "err": {},
+              "uuid": "f9fa4e77-d4c0-4043-88a7-8580fc6c3732",
+              "parentUUID": "20a17381-c05f-4bbf-8b0b-ef239c60661b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ensure only the relevant tasks are displayed based on the chosen filter(ACTIVE) ",
+              "fullTitle": "ToDoMVC - Completing tasks Ensure only the relevant tasks are displayed based on the chosen filter(ACTIVE) ",
+              "timedOut": null,
+              "duration": 1447,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input.toggle').eq(0).click();\ncy.get('.footer li a[href=\"#/active\"]').click();\ncy.get('.todo-list li').find('label').eq(0).should('contain', 'Task 2');\ncy.get('.todo-list li').find('label').eq(1).should('contain', 'Task 3');",
+              "err": {},
+              "uuid": "d7452bc3-dad6-40bb-8a36-b66b5a38f0a5",
+              "parentUUID": "20a17381-c05f-4bbf-8b0b-ef239c60661b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ensure only the relevant tasks are displayed based on the chosen filter(COMPLETED) ",
+              "fullTitle": "ToDoMVC - Completing tasks Ensure only the relevant tasks are displayed based on the chosen filter(COMPLETED) ",
+              "timedOut": null,
+              "duration": 1394,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input.toggle').eq(0).click();\ncy.get('.footer li a[href=\"#/completed\"]').click();\ncy.get('.todo-list li').find('label').eq(0).should('contain', 'Task 1');\ncy.get('.todo-list li').find('label').invoke('css', 'text-decoration').should('include', 'line-through');",
+              "err": {},
+              "uuid": "83b857b9-c736-4fb5-9202-67d113e3983f",
+              "parentUUID": "20a17381-c05f-4bbf-8b0b-ef239c60661b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f9fa4e77-d4c0-4043-88a7-8580fc6c3732",
+            "d7452bc3-dad6-40bb-8a36-b66b5a38f0a5",
+            "83b857b9-c736-4fb5-9202-67d113e3983f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4658,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
